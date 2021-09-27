@@ -1,15 +1,16 @@
 ﻿using System.Collections.Generic;
 using UsersRESTAPI.Models;
+using System.Threading.Tasks;
 
 namespace UsersRESTAPI.Repository
 {
         public interface IUsersRepo
     {
-        public List<UserModelWithId> GetUsers();
-        public UserModelWithId GetById(uint id);
-        public string Delete(uint id);
-        public string Update(UserModel user,uint id);
-        public string Add(UserModel user);
-
+        public Task< List<UserModelWithId>> GetUsers();
+        public Task<List<UserModelWithId>> GetById(uint id);
+        public Task Delete(uint id);
+        public Task Update(UserModel user,uint id);
+        public Task Add(UserModel user);
+        public Task<string> PasswordComparison(UserModelForAuth user);
     }
 }

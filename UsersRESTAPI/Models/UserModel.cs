@@ -7,6 +7,7 @@ namespace UsersRESTAPI.Models
 {
     public class UserModel
     {
+
         [Required]
         public string Lin { get; set; }
         [Required]
@@ -15,12 +16,10 @@ namespace UsersRESTAPI.Models
         public string LastName { get; set; }
         [Required]
         public string BirthDate { get; set; }
-    }
-
-    public class UserModelWithId : UserModel
-    {
         [Required]
-        public uint Id { get; }
-
+        public string password { get; set; }
     }
+
+
+
 }

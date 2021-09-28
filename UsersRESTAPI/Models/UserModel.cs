@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
+
 namespace UsersRESTAPI.Models
 {
     public class UserModel
@@ -17,6 +19,7 @@ namespace UsersRESTAPI.Models
         [Required]
         public string BirthDate { get; set; }
         [Required]
+        [JsonIgnore]
         public string password { get; set; }
     }
 
